@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root {
+    --black: #292929;
+    --visbyRegular: 'Visby CF Regular', sans-serif;
+}
+/*-------------------- nav start ---------------------------*/
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    padding-bottom: 10px;
+    background: #fff;
+    width: 100%;
+}
+.navbar svg {
+    width: 129px;
+}
+.navbar .para {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 20px; */
+    width: 55%;
+}
+.navbar .para p {
+    font-weight: 540;
+    font-size: 16px;
+    color: #292929;
+    position: relative;
+}
+.navbar .para p::before {
+    content: "";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    background-color: #292929;
+
+}
+.navbar .para p:hover:before {
+    width: 100%;
+    transition: all .4s ease;
+}
+.navbar .para .btn {
+    height: 12px;
+    position: relative;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.navbar .para .btn span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    
+}
+.navbar .para .btn::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+    height: 3px;
+    background-color: black;
+}
+.navbar .para .btn:hover::before {
+    width: 100%;
+    transition: all 1s ease;
+}
+.navbar .para .box {
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+
+}
+
+/*-------------------- nav end ---------------------------*/
+/*------------------- First section start ----------------------*/
+.first-section {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    margin-top: 70px;
+}
+.first-section h1 {
+    font-size: 87px;
+    line-height: 105%;
+    color: var(--black);
+    font-weight: 550;
+    top: 0;
+    margin: 0;
+}
+.first-section p {
+    font-family: var(--visbyRegular);
+    font-size: 16px;
+    color: rgba(128, 128, 128, 0.567);
+    line-height: 25px;
+}
+
+
+
+
+
+/*------------------- First section end----------------------*/
+
+/*------------------- Second section start----------------------*/
+.second-section {
+    padding-top: 50px;
+}
+.second-section .span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    width: 70%; 
+    /* gap: 100px; */
+    padding: 10px 0;
+    color : rgb(128, 128, 128);
+}
+.second-section .span span {
+    position: relative;
+}
+
+.second-section .span span::before {
+    content: "";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: -3px;
+    background-color: black;
+}
+.second-section .span span:hover::before {
+    width: 100%;
+    transition: all 1s ease;
+}
+.second-section .image::-webkit-scrollbar {
+    display: none;
+}
+.second-section img {
+    transform: scale(1);
+    animation: walid 1.5s ease;
+    z-index: 0;
+}
+.second-section .image {
+    overflow: auto;
+    width: 100%;
+    position: relative;
+}
+.second-section .image::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    animation: ka 1.5s ease;
+    background-color: white;
+    z-index: 999;
+}
+@keyframes ka {
+    from {
+        height: 100%;
+
+    }
+    to {
+        height: 0%;
+
+    }
+}
+@keyframes walid {
+    from {
+        transform: scale(1.8);
+
+    }
+    to {
+        transform: scale(1);
+    }
+    
+}
+/*------------------- Second section end----------------------*/
